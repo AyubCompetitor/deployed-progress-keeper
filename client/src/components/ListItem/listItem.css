@@ -6,20 +6,6 @@
 	display: flex;
 	justify-content: space-between;
 }
-.edit-btn {
-	border: 1.5px solid rgb(141, 181, 145);
-	color: rgb(141, 181, 145);
-	text-transform: uppercase;
-}
-
-.edit-btn:hover {
-	background-color: rgb(182, 223, 186);
-}
-
-.edit-btn:active {
-	color: rgb(255, 255, 255);
-	background-color: rgb(141, 181, 145);
-}
 
 .delete-btn {
 	border: 1.5px solid rgb(255, 175, 163);
