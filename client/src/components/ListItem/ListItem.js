@@ -4,7 +4,7 @@ import ProgressBar from "../ProgressBar/ProgressBar";
 import Modal from "../Modal/Modal";
 import "./listItem.css";
 
-const ListItem = ({ task }) => {
+const ListItem = ({ task, getData }) => {
 	const [showModal, setShowModal] = useState(false);
 
 	return (
@@ -22,7 +22,12 @@ const ListItem = ({ task }) => {
 				<button className="delete-btn">DELETE</button>
 			</div>
 			{showModal && (
-				<Modal mode={"edit"} setShowModal={setShowModal} task={task} />
+				<Modal
+					mode={"edit"}
+					setShowModal={setShowModal}
+					task={task}
+					getData={getData}
+				/>
 			)}
 		</li>
 	);

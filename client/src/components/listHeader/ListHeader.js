@@ -2,7 +2,7 @@ import { useState } from "react";
 import Modal from "../Modal/Modal";
 import "./listHeader.css";
 
-const ListHeader = ({ listName }) => {
+const ListHeader = ({ listName, getData }) => {
 	const [showModal, setShowModal] = useState(false);
 
 	const signOut = () => {
@@ -23,7 +23,13 @@ const ListHeader = ({ listName }) => {
 					SIGN OUT
 				</button>
 			</div>
-			{showModal && <Modal mode={"create"} setShowModal={setShowModal} />}
+			{showModal && (
+				<Modal
+					mode={"create"}
+					setShowModal={setShowModal}
+					getData={getData}
+				/>
+			)}
 		</div>
 	);
 };
